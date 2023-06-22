@@ -1,0 +1,75 @@
+body {
+    background-color: #f6f8ff;
+}
+
+.cars {
+    width: 100%;
+    margin-top: 55px;
+    margin-bottom: 56px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 0 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cars h1 {
+    color: #5899e4;
+    font-family: "RobotoSlab";
+    text-transform: uppercase;
+}
+
+.cars .cars-data_Wrapper {
+    height: max-content;
+    max-height: 727px;
+    overflow: auto;
+    overflow-x: hidden;
+    width: 327px;
+}
+
+.cars h1 {
+    padding-left: 26px;
+    font-family: "RobotoSlab";
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cars .cars-data_Wrapper::-webkit-scrollbar {
+    width: 5px;
+    background-color: #5899e4;
+}
+
+/* Track */
+.cars .cars-data_Wrapper ::-webkit-scrollbar-track {
+    background: #ffffff;
+    width: 10px;
+}
+
+/* Handle */
+.cars .cars-data_Wrapper::-webkit-scrollbar-thumb {
+    background: #212525;
+    width: 5px;
+}
+
+/* Handle on hover */
+.cars .cars-data_Wrapper ::-webkit-scrollbar-thumb:hover {
+    background: #f75c5c;
+}
+
+@media screen and (max-width: 915px) {
+    .cars {
+        flex-direction: column;
+    }
+    .cars .cars-data_Wrapper {
+        margin: 55px 0;
+        flex-direction: column;
+    }
+    .drivenWheels,
+    .manufacturerCode,
+    .matchingType,
+    .numOfDoors,
+    .squishVin {
+        margin: 0px !important;
+    }
+}
