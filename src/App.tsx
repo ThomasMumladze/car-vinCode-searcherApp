@@ -32,15 +32,15 @@ function App() {
         }
     }, [data]);
 
-    const convertedCategories = useMemo(() => {
-        const value: any = {};
+    // const convertedCategories = useMemo(() => {
+    //     const value: any = {};
 
-        value.categories = Object.entries(data.categories || {}).map(([key, value]) => ({
-            key,
-            value,
-        }));
-        return value;
-    }, [data]);
+    //     value.categories = Object.entries(data.categories || {}).map(([key, value]) => ({
+    //         key,
+    //         value,
+    //     }));
+    //     return value;
+    // }, [data]);
 
     return (
         <>
