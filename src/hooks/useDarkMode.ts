@@ -17,6 +17,7 @@ export const useDarkMode = () => {
             setIsDark(!isDark);
         }
     };
+    
     useEffect(() => {
         document.addEventListener("keyup", handleDarkModeOnKeyPress);
 
