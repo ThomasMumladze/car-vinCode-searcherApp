@@ -20,7 +20,7 @@ function App() {
                     "Content-Type": "application/json",
                 },
             })
-            .then((res) => console.log(res.data))
+            .then((res) => setData(res.data))
             .catch((err) => console.error(err));
     };
 
