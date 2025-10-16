@@ -1,7 +1,6 @@
 import "./styles.scss";
 
 import { useDarkMode } from "../../hooks/useDarkMode";
-import Loading from "../loading/Loadign";
 
 interface Props {
     error: boolean | null;
@@ -19,18 +18,14 @@ const Header = (props: Props) => {
         <header>
             <div className="header_body">
                 <div className="title">
-                    <h1 style={{ color: isDark ? "#f6f8ff" : "#000" }}>
-                        vin - finder
-                    </h1>
+                    <h1 style={{ color: isDark ? "#f6f8ff" : "#000" }}>vin - finder</h1>
                 </div>
 
                 <div
                     className="search "
                     style={{
                         backgroundColor: isDark ? "#1e2a47" : "#f6f8ff",
-                        boxShadow: isDark
-                            ? ""
-                            : "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)",
+                        boxShadow: isDark ? "" : "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)",
                     }}
                 >
                     <svg
@@ -57,7 +52,7 @@ const Header = (props: Props) => {
                     <button onClick={props.handleVinEncode}>ძიება</button>
 
                     {/* LOADING */}
-                    {props.loading ? <Loading /> : null}
+
                     {props.error ? (
                         <div
                             className="errorMessage"
@@ -72,10 +67,7 @@ const Header = (props: Props) => {
                 </div>
 
                 {/* DARK MODE */}
-                <button
-                    onClick={handleDarkMode}
-                    style={{ color: isDark ? "#FFF" : "#000" }}
-                >
+                <button onClick={handleDarkMode} style={{ color: isDark ? "#FFF" : "#000" }}>
                     {isDark ? "LIGHT" : "DARK"}
                 </button>
             </div>
